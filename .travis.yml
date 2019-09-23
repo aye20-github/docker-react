@@ -6,4 +6,4 @@ before_install:
  - docker build -t aye20dockerhub/docker-react -f dockerfile.dev .
  
 script:
- - docker run aye20dockerhub/docker-react npm run test -- --coverage
+ - docker run -e CI=true aye20dockerhub/docker-react npm run test
